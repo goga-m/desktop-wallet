@@ -10,15 +10,15 @@ describe("Card", () => {
 		expect(wrapper.html()).toMatchSnapshot();
 	});
 
-	it("should render with network name", () => {
+	it("should render with the configured title", () => {
 		const wrapper = shallowMount(Card, {
 			propsData: {
-				networkName: "Test",
+				title: "Test",
 			},
 		});
 
-		const networkName = wrapper.find(`[data-testid="Card__networkName"]`);
-		expect(networkName.text()).toBe("Test");
+		const title = wrapper.find(`[data-testid="Card__title"]`);
+		expect(title.text()).toBe("Test");
 		expect(wrapper.html()).toMatchSnapshot();
 	});
 });

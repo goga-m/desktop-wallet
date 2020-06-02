@@ -1,7 +1,7 @@
 <template>
 	<div class="Card rounded-lg flex border w-full items-center" v-bind:class="{'selected': selected}">
 		<div
-			class="Card__content__networkImage rounded-full border w-12 h-12 flex justify-center items-center ml-3"
+			class="Card__content__image rounded-full border w-12 h-12 flex justify-center items-center ml-3"
 			v-bind:class="{'selected': selected}"
 		>
 			<!-- TODO: This should be replaced with the correspondent network image-->
@@ -13,10 +13,10 @@
 			</svg>
 		</div>
 		<span
-			v-if="networkName"
-			data-testid="Card__networkName"
-			class="Card__content__networkName ml-3 font-bold text-base"
-		>{{ networkName }}</span>
+			v-if="title"
+			data-testid="Card__title"
+			class="Card__content__title ml-3 font-bold text-base"
+		>{{ title }}</span>
 	</div>
 </template>
 
@@ -26,7 +26,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class Card extends Vue {
 	@Prop({ default: true }) public selected!: boolean;
-	@Prop({ default: "" }) public networkName!: string;
+	@Prop({ default: "" }) public title!: string;
 }
 </script>
 
@@ -39,7 +39,7 @@ export default class Card extends Vue {
 		border: theme("borderWidth.2") solid theme("colors.green.500");
 	}
 
-	.Card__content__networkImage {
+	.Card__content__image {
 		border: theme("borderWidth.1") solid theme("colors.gray.400");
 		&.selected {
 			border: theme("borderWidth.1") solid theme("colors.gray.300");

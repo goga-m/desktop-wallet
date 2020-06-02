@@ -4,16 +4,16 @@ import Card from "./Card.vue";
 
 export default { title: "Basic / Card", decorators: [withKnobs] };
 
-export const Network = () => ({
+export const Default = () => ({
 	components: { Card },
     props: {
-		networkName: {
-			default: text("Network Name", "Bitcoin"),
+		title: {
+			default: text("Card title", "Bitcoin"),
 		},
 	},
 	template: `
 		<div class="space-x-4 p-5">
-			<Card :networkName="networkName"></Card>
+			<Card :title="title"></Card>
 		</div>
 	`,
 });
