@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepIndicator should render 1`] = `
+<div data-testid="StepIndicator" class="StepIndicator flex w-full">
+  <div data-testid="StepIndicator__step" class="StepIndicator__step flex-1 mr-2 rounded-lg"></div>
+  <div data-testid="StepIndicator__step" class="StepIndicator__step flex-1 mr-2 rounded-lg"></div>
+</div>
+`;
