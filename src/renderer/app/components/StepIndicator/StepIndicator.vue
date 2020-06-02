@@ -15,7 +15,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class StepIndicator extends Vue {
-	@Prop({ default: 0 }) public activeIndex!: number;
+	@Prop({ default: 1 }) public activeIndex!: number;
 	@Prop({ default: 2 }) public size!: number;
 }
 </script>
