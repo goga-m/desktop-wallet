@@ -126,6 +126,8 @@ module.exports = {
 				"8xl": "6rem",
 			},
 			borderWidth: {
+				1: "1px",
+				2: "2px",
 				3: "3px",
 				10: "10px",
 			},
