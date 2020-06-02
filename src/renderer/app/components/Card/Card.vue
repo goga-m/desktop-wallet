@@ -1,7 +1,10 @@
 <template>
-	<div class="Card rounded-lg flex border w-full items-center" v-bind:class="{'selected': selected}">
+	<div
+		class="Card rounded-lg flex border w-full items-center p-6 cursor-pointer"
+		v-bind:class="{'selected': selected}"
+	>
 		<div
-			class="Card__content__image rounded-full border w-12 h-12 flex justify-center items-center ml-3"
+			class="Card__content__image rounded-full border w-12 h-12 flex justify-center items-center"
 			v-bind:class="{'selected': selected}"
 		>
 			<!-- TODO: This should be replaced with the correspondent network image-->
@@ -32,7 +35,6 @@ export default class Card extends Vue {
 
 <style lang="postcss" scoped>
 .Card {
-	padding: 1rem;
 	color: theme("colors.gray.900");
 	&.selected {
 		@apply bg-green-100;
